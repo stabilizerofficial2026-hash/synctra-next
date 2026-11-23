@@ -65,9 +65,6 @@ const GROUP_THEMES = {
     subtitle: "Philosophy · Symbolism · Self-Determination & Atmospheric Inquiry",
     icon: "⛤",
     artwork: "assets/open-minds/satanism.webp",
-    wallpaper: "assets/open-minds/satanism-wallpaper.webp",
-    bannerArtwork: "assets/open-minds/satanism-banner.webp",
-    emblem: "assets/open-minds/satanism-emblem.webp",
     tone: 155.56
   },
   lgbtq: {
