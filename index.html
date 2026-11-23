@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030b07">
+  <title>SyncTrA — Private Creative Social Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-next.css">
+</head>
+<body data-accent-theme="emerald">
+  <div class="shell">
+    <!-- APP HEADER -->
+    <header class="topbar" id="app-header">
+      <a class="brand" href="#welcome-screen" aria-label="SyncTrA home">
+        <span class="brand-mark" aria-hidden="true">▶</span>
+        <span class="brand-text">SyncTrA</span>
+      </a>
+
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#welcome-screen" data-nav="home" class="is-current">⌂ <span>Home</span></a>
+        <a href="#gallery-section" data-nav="explore">⌕ <span>Explore</span></a>
+        <a href="#discover-section" data-nav="groups">♧ <span>Groups</span></a>
+        <a href="#gallery-section" data-nav="studio">▣ <span>Studio</span></a>
+        <a href="#plans-section" data-nav="marketplace">▤ <span>Marketplace</span></a>
+        <a href="#plans-section" data-nav="membership" class="top-nav-membership">♛ <span>Membership</span></a>
+        <a href="#notifications-panel" data-nav="notifications" class="auth-only-link hidden">🔔 <span>Notifications</span> <span id="header-notif-badge" class="nav-count">0</span></a>
+        <a href="#profile-section" data-nav="profile" class="auth-only-link hidden">♙ <span>Profile</span></a>
+      </nav>
+
+      <div class="topbar-right">
+        <span class="private-tag">PRIVATE MEMBERSHIP</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- LANDING / HERO / CREATIVE GALLERY / MEMBERSHIP -->
+      <section id="welcome-screen" class="welcome-screen">
+        <div class="welcome-orbit orbit-one" aria-hidden="true"></div>
+        <div class="welcome-orbit orbit-two" aria-hidden="true"></div>
+
+        <div class="welcome-content">
+          <div class="welcome-symbol" aria-hidden="true"><span>✦</span></div>
+          <p class="eyebrow">HARMONY OF CREATIVITY</p>
+          <h1>Welcome to <span>SyncTrA</span></h1>
+          <p class="welcome-mantra">Sync the area of your being.</p>
+          <p class="welcome-copy">
+            Looking for a welcoming, creative social space that fits your interests, values and personality?
+            Express your thoughts, discover different perspectives and grow your creativity with confidence.
+            Choose what you share, connect at your own pace, and find your own harmony.
+          </p>
+          <div class="welcome-actions">
+            <button id="welcome-express" class="primary welcome-choice" type="button">
+              <strong>EXPRESS</strong>
+              <small>Enter your creative space</small>
+            </button>
+            <button id="welcome-evolve" class="secondary welcome-choice" type="button">
+              <strong>EVOLVE</strong>
+              <small>Create your SyncTrA identity</small>
+            </button>
+          </div>
+          <p class="welcome-footnote">Your identity · Your interests · Your creativity · Your harmony</p>
+        </div>
+
+        <!-- COMMUNITY & PILLARS -->
+        <section id="discover-section" class="welcome-discover" aria-label="Discover SyncTrA">
+          <div class="landing-heading">
+            <p class="eyebrow">A WORLD THAT MOVES WITH YOU</p>
+            <h2>More than a social feed.<br><span>Your own creative world.</span></h2>
+            <p>Explore communities, share ideas, build connections and make space for the things that inspire you.</p>
+          </div>
+          <div class="landing-feature-grid">
+            <article class="landing-feature">
+              <div class="landing-feature-art" aria-hidden="true">
+                <img src="assets/open-minds/open-discussion.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <span class="landing-feature-icon">✧</span>
+              <h3>OPEN MINDS</h3>
+              <p>Explore respectful conversations across beliefs, philosophy, science, technology and activism.</p>
+            </article>
+            <article class="landing-feature">
+              <div class="landing-feature-art" aria-hidden="true">
+                <img src="assets/ai-gallery/generative-art-lab.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <span class="landing-feature-icon">◈</span>
+              <h3>YOUR COMMUNITY</h3>
+              <p>Find people with shared interests, join themed groups and connect through private messages.</p>
+            </article>
+            <article class="landing-feature">
+              <div class="landing-feature-art" aria-hidden="true">
+                <img src="assets/ai-gallery/digital-creator.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <span class="landing-feature-icon">✦</span>
+              <h3>CREATIVE EXPRESSION</h3>
+              <p>Share your ideas, original series, artwork and projects as your creative world grows.</p>
+            </article>
+            <article class="landing-feature">
+              <div class="landing-feature-art" aria-hidden="true">
+                <img src="assets/open-minds/hacker-community.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <span class="landing-feature-icon">⌁</span>
+              <h3>YOUR PRIVACY, YOUR CHOICE</h3>
+              <p>Use account and sharing controls thoughtfully in a privacy-conscious creator space.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- CREATIVE GALLERY -->
+        <section id="gallery-section" class="ai-gallery" aria-label="SyncTrA creative gallery">
+          <div class="landing-heading gallery-heading">
+            <p class="eyebrow">IMAGINATION WITHOUT BOUNDARIES</p>
+            <h2>Step into the <span>SyncTrA Creative Gallery.</span></h2>
+            <p>Swipe through featured artwork, featured video, original series, and immersive digital collections.</p>
+          </div>
+
+          <div class="gallery-explore-bar" role="tablist" aria-label="Filter gallery collections">
+            <button type="button" class="gallery-filter is-active" data-filter="all">All Works</button>
+            <button type="button" class="gallery-filter" data-filter="series">Original Series</button>
+            <button type="button" class="gallery-filter" data-filter="video">Featured Video</button>
+            <button type="button" class="gallery-filter" data-filter="artwork">Featured Artwork</button>
+          </div>
+
+          <div class="gallery-frame">
+            <div class="gallery-toolbar">
+              <span class="gallery-live-dot"></span>
+              <span>CURATED CREATIVE SHOWCASE</span>
+              <span class="gallery-count" id="gallery-count">01 / 12</span>
+            </div>
+
+            <div class="gallery-track" id="ai-gallery-track" tabindex="0" aria-label="Artwork carousel. Swipe or use the arrow buttons to explore.">
+              <figure class="gallery-slide" data-category="series">
+                <img src="assets/ai-gallery/rainy-city-portrait.webp" alt="BATANG LEYTE original cinematic series key art" loading="lazy">
+                <span class="gallery-badge">ORIGINAL SERIES</span>
+                <figcaption>
+                  <span>01 · ORIGINAL SERIES</span>
+                  <strong>BATANG LEYTE</strong>
+                  <small>Cinematic Island Chronicles · Episode Visuals</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="series">
+                <img src="assets/ai-gallery/biomechanical-muse.webp" alt="THE UNKNOWN Collection 001 dark surreal sculpture" loading="lazy">
+                <span class="gallery-badge">COLLECTION 001</span>
+                <figcaption>
+                  <span>02 · ORIGINAL SERIES</span>
+                  <strong>THE UNKNOWN — Collection 001</strong>
+                  <small>Limited Archival Visual Series</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="video">
+                <img src="assets/ai-gallery/neon-city-vision.webp" alt="Featured Video visual reel preview" loading="lazy">
+                <span class="gallery-badge">FEATURED VIDEO</span>
+                <figcaption>
+                  <span>03 · FEATURED VIDEO</span>
+                  <strong>Beyond Tomorrow (Motion Reel)</strong>
+                  <small>Cinematic Sci-Fi Visual Direction</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="artwork">
+                <img src="assets/ai-gallery/immersive-color-world.webp" alt="Immersive room filled with luminous multicolored glass-like digital forms" loading="lazy">
+                <span class="gallery-badge">FEATURED ARTWORK</span>
+                <figcaption>
+                  <span>04 · FEATURED ARTWORK</span>
+                  <strong>Color in Motion</strong>
+                  <small>Abstract Environments</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="artwork">
+                <img src="assets/ai-gallery/digital-river-gallery.webp" alt="Dark digital art gallery with glowing flowing patterns across the floor" loading="lazy">
+                <figcaption>
+                  <span>05 · DIGITAL ENVIRONMENTS</span>
+                  <strong>River of Light</strong>
+                  <small>Spatial Visual Art</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="artwork">
+                <img src="assets/ai-gallery/generative-art-lab.webp" alt="Futuristic creative gallery with large colorful digital artworks" loading="lazy">
+                <figcaption>
+                  <span>06 · CREATIVE SPACES</span>
+                  <strong>The Art Lab</strong>
+                  <small>Generative Concepts</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="video">
+                <img src="assets/ai-gallery/cyberpunk-wanderer.webp" alt="Anime-inspired cyberpunk woman overlooking a rainy neon city" loading="lazy">
+                <span class="gallery-badge">FEATURED VIDEO</span>
+                <figcaption>
+                  <span>07 · FEATURED VIDEO</span>
+                  <strong>Midnight Wanderer</strong>
+                  <small>Animated Storyboard &amp; Soundscape</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="artwork">
+                <img src="assets/ai-gallery/digital-creator.webp" alt="Hooded digital artist working at a glowing futuristic workstation" loading="lazy">
+                <figcaption>
+                  <span>08 · DIGITAL IDENTITIES</span>
+                  <strong>Creator Mode</strong>
+                  <small>Virtual Personas</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="artwork">
+                <img src="assets/ai-gallery/surreal-cat-spirit.webp" alt="Surreal luminous character surrounded by small glowing cat-like figures" loading="lazy">
+                <figcaption>
+                  <span>09 · SURREAL ART</span>
+                  <strong>Dream Companions</strong>
+                  <small>Fantasy Concepts</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="artwork">
+                <img src="assets/ai-gallery/neon-dream-portrait.webp" alt="Vibrant pink and violet futuristic fantasy portrait" loading="lazy">
+                <figcaption>
+                  <span>10 · NEON FANTASY</span>
+                  <strong>Neon Reverie</strong>
+                  <small>Color and Emotion</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="series">
+                <img src="assets/open-minds/taoism.webp" alt="Harmony of Nature architectural vision" loading="lazy">
+                <figcaption>
+                  <span>11 · ENVIRONMENTAL ART</span>
+                  <strong>Emerald Sanctuary</strong>
+                  <small>Nature &amp; Architecture</small>
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-category="series">
+                <img src="assets/open-minds/science.webp" alt="Cosmic discovery visual" loading="lazy">
+                <figcaption>
+                  <span>12 · COSMIC EXPLORATION</span>
+                  <strong>Horizons of Light</strong>
+                  <small>Speculative Visuals</small>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="gallery-controls">
+              <button class="gallery-arrow" id="gallery-prev" type="button" aria-label="Previous artwork">←</button>
+              <div class="gallery-dots" id="gallery-dots" aria-label="Choose artwork">
+                <button class="gallery-dot is-active" type="button" data-gallery-index="0" aria-label="Show artwork 1" aria-current="true"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="1" aria-label="Show artwork 2"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="2" aria-label="Show artwork 3"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="3" aria-label="Show artwork 4"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="4" aria-label="Show artwork 5"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="5" aria-label="Show artwork 6"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="6" aria-label="Show artwork 7"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="7" aria-label="Show artwork 8"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="8" aria-label="Show artwork 9"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="9" aria-label="Show artwork 10"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="10" aria-label="Show artwork 11"></button>
+                <button class="gallery-dot" type="button" data-gallery-index="11" aria-label="Show artwork 12"></button>
+              </div>
+              <button class="gallery-arrow" id="gallery-next" type="button" aria-label="Next artwork">→</button>
+            </div>
+          </div>
+
+          <div class="gallery-footer">
+            <p>Every creation begins with an idea. Discover inspiration, share your imagination and build your own creative world.</p>
+            <button id="gallery-join" class="primary" type="button">CREATE WITH SYNCTRA <span>▶</span></button>
+          </div>
+          <p class="gallery-note">Artwork gallery is a visual showcase for inspiration. AI creation features unlock as generation services are connected.</p>
+        </section>
+
+        <!-- MEMBERSHIP TIERS -->
+        <section id="plans-section" class="landing-plans" aria-label="SyncTrA membership plans">
+          <div class="landing-heading">
+            <p class="eyebrow">CHOOSE YOUR HORIZON</p>
+            <h2>Find the plan that fits <span>your creative journey.</span></h2>
+            <p>Every tier gives you a place to belong. Compare monthly credits, storage limits, group capacity, soundtracks, and marketplace access.</p>
+          </div>
+          <div class="landing-plan-grid">
+            <article class="landing-plan">
+              <p class="plan-kicker">START YOUR JOURNEY</p>
+              <h3>Creator</h3>
+              <p class="landing-price">₱199 <small>/ month</small></p>
+              <p class="plan-summary">A welcoming home for your ideas and everyday creativity.</p>
+              <ul>
+                <li><strong>300</strong> monthly CTY credits</li>
+                <li><strong>512 MiB</strong> cloud storage limit</li>
+                <li>Groups up to <strong>500</strong> members</li>
+                <li><strong>15-second</strong> profile soundtrack</li>
+                <li>Marketplace browsing access</li>
+              </ul>
+              <button class="secondary landing-plan-cta" type="button" data-plan-cta="creator">Choose Creator</button>
+            </article>
+
+            <article class="landing-plan featured">
+              <span class="plan-ribbon">MOST POPULAR</span>
+              <p class="plan-kicker">GROW YOUR WORLD</p>
+              <h3>Creator Plus</h3>
+              <p class="landing-price">₱399 <small>/ month</small></p>
+              <p class="plan-summary">More room to connect, collaborate and create.</p>
+              <ul>
+                <li><strong>1,000</strong> monthly CTY credits</li>
+                <li><strong>2 GiB</strong> cloud storage limit</li>
+                <li>Groups up to <strong>3,000</strong> members</li>
+                <li><strong>30-second</strong> profile soundtrack</li>
+                <li>Marketplace creator showcase</li>
+              </ul>
+              <button class="primary landing-plan-cta" type="button" data-plan-cta="creator_plus">Choose Creator Plus</button>
+            </article>
+
+            <article class="landing-plan">
+              <p class="plan-kicker">UNLOCK MORE POSSIBILITIES</p>
+              <h3>Creator Pro</h3>
+              <p class="landing-price">₱799 <small>/ month</small></p>
+              <p class="plan-summary">For ambitious creators building a larger presence.</p>
+              <ul>
+                <li><strong>2,500</strong> monthly CTY credits</li>
+                <li><strong>10 GiB</strong> cloud storage limit</li>
+                <li>Groups up to <strong>5,000</strong> members</li>
+                <li><strong>60-second</strong> profile soundtrack</li>
+                <li>Full Marketplace selling access</li>
+              </ul>
+              <button class="secondary landing-plan-cta" type="button" data-plan-cta="creator_pro">Choose Creator Pro</button>
+            </article>
+          </div>
+          <p class="landing-disclaimer">Prices shown are the current monthly membership rates. Secure payment checkout is connected only when billing is enabled; selecting a plan here opens registration/login without charging your account.</p>
+        </section>
+
+        <div class="welcome-bottom-glow" aria-hidden="true"></div>
+      </section>
+
+      <!-- AUTH VIEW -->
+      <section id="auth-view" class="auth-layout hidden">
+        <div class="intro">
+          <p class="eyebrow">A PRIVATE SPACE TO CREATE</p>
+          <h1>Make something.<br><span>Share the harmony.</span></h1>
+          <p class="intro-copy">A members-only creative community for art, video, music, projects and themed discussions.</p>
+          <div class="values">
+            <div><b>01</b><span>Private by design</span></div>
+            <div><b>02</b><span>Chronological community feed</span></div>
+            <div><b>03</b><span>Themed communities &amp; private groups</span></div>
+          </div>
+          <p class="fine-print">SyncTrA is for adults aged 18 and older. Respectful expression, privacy and transparent community rules matter here.</p>
+        </div>
+
+        <section class="panel auth-panel">
+          <button id="back-to-welcome" class="text-button back-welcome" type="button">← Welcome</button>
+          <div class="tabs">
+            <button id="tab-login" class="tab active" type="button">Log in</button>
+            <button id="tab-signup" class="tab" type="button">Create account</button>
+          </div>
+
+          <form id="login-form" class="form">
+            <h2>Welcome back</h2>
+            <p class="muted">Log in to your private SyncTrA space.</p>
+            <label>Email address<input id="login-email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+            <label>Password<input id="login-password" type="password" autocomplete="current-password" required minlength="8" placeholder="Your password"></label>
+            <button class="primary" type="submit">Log in securely</button>
+            <button id="forgot-password" class="text-button" type="button">Forgot password?</button>
+          </form>
+
+          <form id="signup-form" class="form hidden">
+            <h2>Join SyncTrA</h2>
+            <p class="muted">Create your member identity. No outside profile-photo uploads.</p>
+            <label>Username<input id="signup-username" type="text" minlength="3" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" autocomplete="username" required placeholder="your_unique_name"></label>
+            <small>3–24 characters. Letters, numbers and underscore only.</small>
+            <label>Display name<input id="signup-display" type="text" minlength="1" maxlength="60" required placeholder="How members will see you"></label>
+            <label>Email address<input id="signup-email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+            <label>Password<input id="signup-password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters"></label>
+            <label>Date of birth<input id="signup-dob" type="date" required></label>
+            <label class="check-row"><input id="age-check" type="checkbox" required><span>I confirm that I am 18 years old or older.</span></label>
+            <label class="check-row"><input id="rules-check" type="checkbox" required><span>I agree to follow SyncTrA's community rules and privacy-first approach.</span></label>
+            <button class="primary" type="submit">Create my account</button>
+            <p class="tiny">Your date of birth is checked during registration and is not displayed on your public member profile.</p>
+          </form>
+          <div id="auth-message" class="message" role="status" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <!-- AUTHENTICATED WORKSPACE -->
+      <section id="dashboard-view" class="dashboard hidden">
+        <div class="dash-head">
+          <div>
+            <p class="eyebrow">MEMBER SPACE</p>
+            <h1>Welcome, <span id="member-display">Creator</span>.</h1>
+            <p class="muted">Your private SyncTrA creative world.</p>
+          </div>
+          <button id="logout-button" class="secondary" type="button">Log out</button>
+        </div>
+
+        <!-- ANDROID / MOBILE STICKY QUICKBAR -->
+        <div class="mobile-quickbar">
+          <button id="quick-menu-toggle" class="secondary menu-toggle" type="button" aria-expanded="false" aria-controls="quick-menu" aria-label="Open navigation menu">
+            <span aria-hidden="true">☰</span><span>Menu</span>
+          </button>
+          <span class="quickbar-brand">SyncTrA <small>YOUR CREATIVE WORLD</small></span>
+          <a href="#notifications-panel" aria-label="Notifications" class="quickbar-notif">
+            🔔<span id="mobile-notif-dot" class="quickbar-badge hidden">0</span>
+          </a>
+        </div>
+
+        <!-- DESKTOP SIDEBAR / MOBILE DRAWER -->
+        <nav id="quick-menu" class="app-nav" aria-label="SyncTrA workspace navigation">
+          <a class="app-nav-brand" href="#feed-section">
+            <span class="nav-orb">▶</span>
+            <span>SyncTrA<small>CREATIVE SOCIAL PLATFORM</small></span>
+          </a>
+          <a href="#feed-section" data-workspace="stream">⌂ <span>Home / Stream</span></a>
+          <a href="#social-hub" data-workspace="explore">⌕ <span>Explore &amp; Network</span></a>
+          <a href="#groups-section" data-workspace="garden">♧ <span>Groups &amp; Open Minds</span></a>
+          <a href="#creative-space" data-workspace="create">▣ <span>Studio &amp; Creations</span></a>
+          <a href="#messages-panel" data-workspace="chat">▤ <span>Direct Chat</span></a>
+          <a href="#notifications-panel" data-workspace="notifications">🔔 <span>Notifications</span></a>
+          <a href="#profile-section" data-workspace="you">♙ <span>Your Profile</span></a>
+          <a href="#about-section" data-workspace="about">✦ <span>About SyncTrA</span></a>
+          <a href="#faq-section" data-workspace="faq">? <span>FAQ &amp; Help</span></a>
+        </nav>
+
+        <!-- WORKSPACE HERO BANNER -->
+        <section class="member-hero" aria-label="SyncTrA creative community">
+          <div class="hero-art">
+            <span class="hero-kicker">A PRIVATE CREATIVE COMMUNITY</span>
+            <h2>CREATE <i>•</i> SHARE <i>•</i> COLLABORATE <i>•</i> EVOLVE</h2>
+            <p>Sync the area of your being. Express freely. Create your own world with harmony.</p>
+          </div>
+        </section>
+
+        <!-- MEMBERSHIP GATE (WHEN SUBSCRIPTION IS INACTIVE) -->
+        <section id="membership-gate" class="panel membership-gate hidden" aria-live="polite">
+          <p class="eyebrow">PRIVATE MEMBERSHIP</p>
+          <h2 id="gate-title">Your membership is not active yet</h2>
+          <p id="gate-description" class="muted">Choose a SyncTrA plan to continue. Private community access is reserved for members with a verified, active subscription.</p>
+          <div id="membership-plans" class="membership-plans"></div>
+          <p id="membership-gate-message" class="message" role="status"></p>
+          <p class="tiny">Secure checkout is being connected. No payment has been taken, and selecting a plan here does not activate access.</p>
+        </section>
+
+        <!-- ACTIVE MEMBER CONTENT -->
+        <div id="member-content" class="member-content">
+          <div class="dash-grid">
+            <!-- PROFILE WORKSPACE (#profile-section) -->
+            <section id="profile-section" class="profile-section">
+              <article id="profile-card" class="panel profile-card">
+                <div class="profile-cover" aria-hidden="true">
+                  <span class="profile-cover-badge" id="profile-rank-badge">✦ CREATOR</span>
+                </div>
+
+                <div class="profile-avatar-row">
+                  <div class="avatar" id="avatar-letter">S</div>
+                  <div class="profile-emblem-pill" id="profile-emblem-pill" title="Membership Rank &amp; CTY Credits">
+                    <span class="emblem-icon">♛</span>
+                    <span id="profile-cty-info">CTY Member · Active</span>
+                  </div>
+                </div>
+
+                <div class="profile-stats" aria-label="Network counts">
+                  <div><b id="profile-followers">0</b><small>Followers</small></div>
+                  <div><b id="profile-following">0</b><small>Following</small></div>
+                  <div><b id="profile-cty-balance">300</b><small>CTY Credits</small></div>
+                </div>
+
+                <p class="eyebrow">YOUR MEMBER IDENTITY</p>
+                <div class="profile-name-row">
+                  <h2 id="profile-name">Member</h2>
+                  <span id="profile-verified-badge" class="verified-badge" title="Verified SyncTrA Member">✓</span>
+                </div>
+                <p class="muted" id="profile-username">@username</p>
+                <p id="profile-bio" class="profile-bio muted">Add a little introduction to your creative world.</p>
+
+                <div class="profile-traits">
+                  <p><strong>Rank</strong> <span id="profile-tier-label">Creator Member</span></p>
+                  <p><strong>Personality</strong> <span id="profile-personality">Not set</span></p>
+                  <p><strong>Hobbies</strong> <span id="profile-hobbies">Not set</span></p>
+                </div>
+
+                <p id="profile-email" class="small"></p>
+                <div class="status-line"><span class="status-dot"></span><span>Verified adult member · Active</span></div>
+
+                <!-- PRIMARY PROFILE CONTROLS -->
+                <div class="profile-quick-actions">
+                  <button id="profile-edit-open" class="primary profile-edit-open" type="button">✎ Edit Profile</button>
+                  <button id="profile-appearance-toggle" class="secondary profile-icon-btn" type="button" aria-expanded="false" aria-controls="profile-appearance-drawer" title="Appearance settings">🎨 <span>Appearance</span></button>
+                  <button id="profile-settings" class="secondary profile-icon-btn" type="button" aria-expanded="false" aria-controls="profile-account-drawer" title="Account settings">⚙ <span>Account</span></button>
+                  <button id="profile-sound-toggle" class="secondary profile-icon-btn" type="button" aria-expanded="false" aria-controls="profile-sound-drawer" title="Sound controls">♫ <span>Sound</span></button>
+                </div>
+
+                <!-- APPEARANCE SETTINGS DRAWER -->
+                <div id="profile-appearance-drawer" class="profile-subdrawer hidden">
+                  <p class="eyebrow">APPEARANCE SETTINGS</p>
+                  <p class="tiny">Personalize your SyncTrA interface glow across your workspace.</p>
+                  <div class="theme-swatches" role="group" aria-label="Interface accent theme">
+                    <button type="button" class="swatch-btn is-active" data-ui-theme="emerald">Emerald Harmony</button>
+                    <button type="button" class="swatch-btn" data-ui-theme="gold">Sovereign Gold</button>
+                    <button type="button" class="swatch-btn" data-ui-theme="crimson">Obsidian Crimson</button>
+                    <button type="button" class="swatch-btn" data-ui-theme="prism">Prism Spectrum</button>
+                  </div>
+                </div>
+
+                <!-- ACCOUNT SETTINGS DRAWER -->
+                <div id="profile-account-drawer" class="profile-subdrawer hidden">
+                  <p class="eyebrow">ACCOUNT SETTINGS</p>
+                  <p class="tiny">Manage security, password recovery, safety lists, or sign out.</p>
+                  <div class="account-drawer-actions">
+                    <button id="profile-reset-password" class="secondary" type="button">Send password reset email</button>
+                    <a href="#feed-section" id="profile-jump-safety" class="secondary">Blocked members &amp; appeals</a>
+                    <button id="profile-logout" class="danger-button" type="button">Log out of SyncTrA</button>
+                  </div>
+                </div>
+
+                <!-- SOUND CONTROLS DRAWER -->
+                <div id="profile-sound-drawer" class="profile-subdrawer hidden">
+                  <p class="eyebrow">SOUND CONTROLS</p>
+                  <p class="tiny" id="profile-sound-status">Ambient room soundscape is currently off.</p>
+                  <div class="sound-drawer-controls">
+                    <button id="profile-audio-btn" class="secondary" type="button">♫ Toggle Ambient Sound</button>
+                    <label class="community-volume">Master Volume <input id="profile-audio-volume" type="range" min="0" max="30" value="12"></label>
+                  </div>
+                </div>
+
+                <!-- EDIT PROFILE FORM -->
+                <form id="profile-form" class="form compact hidden">
+                  <label>Display name<input id="edit-display" maxlength="60" required></label>
+                  <label>Bio<textarea id="edit-bio" maxlength="300" rows="3" placeholder="A little about your creative world"></textarea></label>
+                  <label>Personality type
+                    <select id="edit-personality">
+                      <option value="">Choose your temperament (optional)</option>
+                      <option value="Sanguine">Sanguine — outgoing, enthusiastic, sociable</option>
+                      <option value="Choleric">Choleric — decisive, driven, assertive</option>
+                      <option value="Melancholic">Melancholic — thoughtful, analytical, detail-oriented</option>
+                      <option value="Phlegmatic">Phlegmatic — calm, steady, supportive</option>
+                      <option value="Mixed">A mix / not sure</option>
+                    </select>
+                  </label>
+                  <label>Hobbies <input id="edit-hobbies" maxlength="180" placeholder="e.g. music, gaming, hiking, drawing"></label>
+                  <small class="field-hint">Choose what feels right. Personality types are self-described, not a psychological diagnosis.</small>
+                  <div class="profile-edit-actions">
+                    <button class="primary" type="submit">Save profile</button>
+                    <button id="profile-edit-cancel" class="secondary" type="button">Cancel</button>
+                  </div>
+                </form>
+              </article>
+            </section>
+
+            <!-- STUDIO & MEMBERSHIP SUMMARY -->
+            <div class="dash-content">
+              <article id="creative-space" class="panel">
+                <p class="eyebrow">YOUR CREATIVE STUDIO</p>
+                <h2>Start with your ideas.</h2>
+                <p class="muted">AI image, video and music generation connect in a later phase. Explore your workspace tools below.</p>
+                <div class="feature-grid">
+                  <div class="feature"><span>✦</span><b>AI Studio</b><small>Image &amp; visual synthesis</small></div>
+                  <div class="feature"><span>▧</span><b>Original Series</b><small>BATANG LEYTE &amp; THE UNKNOWN</small></div>
+                  <div class="feature"><span>◉</span><b>Stream Feed</b><small>Active chronological feed</small></div>
+                  <div class="feature"><span>⌘</span><b>Open Minds &amp; Groups</b><small>Themed community rooms</small></div>
+                </div>
+              </article>
+
+              <article class="panel membership">
+                <p class="eyebrow">MEMBERSHIP &amp; CTY</p>
+                <h2 id="membership-status">Active Membership</h2>
+                <p class="muted" id="membership-perks-summary">Includes monthly CTY credits, private group creation, and profile soundtrack.</p>
+                <span class="status-pill" id="membership-pill">Account access: verified</span>
+              </article>
+            </div>
+          </div>
+
+          <!-- STREAM / COMMUNITY FEED -->
+          <section id="feed-section" class="feed-section">
+            <div class="feed-heading">
+              <div>
+                <p class="eyebrow">PRIVATE COMMUNITY STREAM</p>
+                <h2>Member feed</h2>
+                <p class="muted">Latest posts first · visible only to verified SyncTrA members</p>
+              </div>
+              <button id="refresh-feed" class="secondary" type="button">Refresh</button>
+            </div>
+
+            <article class="panel composer">
+              <div class="composer-top">
+                <div class="composer-avatar" id="composer-avatar" aria-hidden="true">S</div>
+                <button id="composer-pill" class="composer-pill" type="button">What's on your creative mind?</button>
+              </div>
+              <form id="post-form" class="form">
+                <label for="post-body">Share an update with the community</label>
+                <textarea id="post-body" rows="2" maxlength="3000" placeholder="What's on your creative mind?" required></textarea>
+                <div class="composer-footer">
+                  <small>Text posts active now · Media attachments arrive with AI Studio.</small>
+                  <button class="primary" type="submit">Publish post</button>
+                </div>
+              </form>
+            </article>
+
+            <div id="feed-list" class="feed-list"></div>
+            <div id="feed-message" class="message" role="status" aria-live="polite"></div>
+
+            <article class="panel safety-panel">
+              <p class="eyebrow">SAFETY &amp; PRIVACY</p>
+              <h3>Blocked members</h3>
+              <p class="muted">Members you block will no longer appear in your community feed. Blocking is private; the other member is not notified.</p>
+              <div id="blocked-list" class="blocked-list"></div>
+              <div id="blocked-message" class="message" role="status" aria-live="polite"></div>
+              <div class="safety-divider"></div>
+              <h3>My reports &amp; appeals</h3>
+              <p class="muted">Review the status of reports you submitted. If a report was actioned or dismissed, you may request one appeal.</p>
+              <div id="my-reports-list" class="my-reports-list"></div>
+              <div id="my-reports-message" class="message" role="status" aria-live="polite"></div>
+            </article>
+          </section>
+
+          <!-- SOCIAL HUB (NOTIFICATIONS, DIRECT CHAT, NETWORK) -->
+          <nav class="social-nav" aria-label="Your private social space">
+            <a href="#social-hub">My Network</a>
+            <a href="#notifications-panel">Notifications <span id="notification-count" class="nav-count">0</span></a>
+            <a href="#messages-panel">Messages</a>
+            <a href="#network-panel">Followers &amp; Following</a>
+          </nav>
+
+          <section id="social-hub" class="social-hub">
+            <div class="feed-heading">
+              <div>
+                <p class="eyebrow">YOUR PRIVATE NETWORK</p>
+                <h2>Stay connected</h2>
+                <p class="muted">Share privately with another SyncTrA member.</p>
+              </div>
+            </div>
+
+            <div class="social-grid">
+              <article id="notifications-panel" class="panel social-panel">
+                <div class="social-panel-head">
+                  <div><p class="eyebrow">ACTIVITY</p><h3>Notifications</h3></div>
+                  <button id="refresh-notifications" class="secondary" type="button">Refresh</button>
+                </div>
+                <div id="notifications-list" class="social-list"></div>
+                <p id="notifications-message" class="message" role="status"></p>
+              </article>
+
+              <article id="messages-panel" class="panel social-panel">
+                <div class="social-panel-head">
+                  <div><p class="eyebrow">PRIVATE CONVERSATIONS</p><h3>Direct Messages</h3></div>
+                  <button id="refresh-messages" class="secondary" type="button">Refresh</button>
+                </div>
+                <form id="new-message-form" class="form compact">
+                  <label>Send a private message to a member username<input id="message-username" maxlength="24" required placeholder="username"></label>
+                  <label>Message<textarea id="message-first-body" rows="2" maxlength="4000" required placeholder="Write a private message…"></textarea></label>
+                  <button class="primary" type="submit">Start conversation</button>
+                </form>
+                <div id="messages-list" class="social-list"></div>
+                <p id="messages-message" class="message" role="status"></p>
+              </article>
+
+              <article id="network-panel" class="panel social-panel network-panel">
+                <div class="social-panel-head">
+                  <div><p class="eyebrow">CREATOR CONNECTIONS</p><h3>Followers &amp; Following</h3></div>
+                  <button id="refresh-network" class="secondary" type="button">Refresh</button>
+                </div>
+                <div class="network-stats">
+                  <div><b id="followers-count">0</b><small>Followers</small></div>
+                  <div><b id="following-count">0</b><small>Following</small></div>
+                </div>
+                <div class="network-columns">
+                  <div><h4>Followers</h4><div id="followers-list" class="social-list"></div></div>
+                  <div><h4>Following</h4><div id="following-list" class="social-list"></div></div>
+                </div>
+                <form id="follow-form" class="form compact">
+                  <label>Find a member by username<input id="follow-username" maxlength="24" required placeholder="creator_username"></label>
+                  <button class="secondary" type="submit">Follow member</button>
+                </form>
+                <p id="network-message" class="message" role="status"></p>
+              </article>
+            </div>
+          </section>
+
+          <!-- GROUPS & OPEN MINDS COMMUNITY ROOMS -->
+          <section id="groups-section" class="groups-section">
+            <div class="feed-heading">
+              <div>
+                <p class="eyebrow">GARDEN · PRIVATE &amp; THEMED COMMUNITIES</p>
+                <h2>Groups &amp; Open Minds</h2>
+                <p class="muted">Enter themed community rooms or collaborate in your private groups.</p>
+              </div>
+              <button id="refresh-groups" class="secondary" type="button">Refresh</button>
+            </div>
+
+            <!-- OPEN MINDS THEMED ROOMS -->
+            <section class="open-minds-section" aria-labelledby="open-minds-title">
+              <div class="open-minds-intro">
+                <div>
+                  <p class="eyebrow">SYNCTRA · OPEN MINDS</p>
+                  <h2 id="open-minds-title">Different beliefs. One respectful space.</h2>
+                  <p class="muted">Each community carries its own visual sanctuary. Disagreement is welcome; harassment is not.</p>
+                </div>
+                <div class="slow-mode-pill">15s <small>SLOW MODE</small></div>
+              </div>
+
+              <div class="community-tools panel">
+                <div>
+                  <b>Room ambience</b>
+                  <small id="community-audio-status">Ambient sound is off</small>
+                </div>
+                <button id="community-audio-toggle" class="secondary" type="button" aria-pressed="false">♫ Sound off</button>
+                <label class="community-volume">Volume <input id="community-audio-volume" type="range" min="0" max="30" value="12"></label>
+              </div>
+
+              <div id="community-rooms" class="community-rooms-grid" aria-live="polite"></div>
+
+              <!-- REUSABLE GROUP CHAT MESSENGER (OPEN MINDS ROOM) -->
+              <section id="community-room-panel" class="panel community-room-panel hidden" data-room-slug="open">
+                <!-- MESSENGER HEADER -->
+                <header class="room-header">
+                  <button id="community-room-back" class="room-back" type="button" aria-label="Back to communities">‹</button>
+                  <span class="room-brand-mark" aria-hidden="true">▶</span>
+                  <div class="room-brand-copy">
+                    <strong>SyncTrA</strong>
+                    <small>Group Chat Messenger</small>
+                  </div>
+                  <div class="room-header-actions">
+                    <span class="room-online-indicator" title="Community online" aria-label="Room is active"></span>
+                    <button id="community-room-add" class="room-header-btn" type="button" aria-label="Invite or share room" title="Invite members">＋</button>
+                    <button id="community-room-search-btn" class="room-header-btn" type="button" aria-label="Search messages" title="Search messages">⌕</button>
+                    <div class="room-more-wrap">
+                      <button id="community-room-more-btn" class="room-header-btn" type="button" aria-label="More room options" aria-expanded="false" title="More options">⋮</button>
+                      <div id="community-room-more-menu" class="room-dropdown hidden" role="menu">
+                        <button type="button" id="menu-toggle-sound" role="menuitem">♫ Toggle ambient sound</button>
+                        <button type="button" id="menu-report-room" role="menuitem">⚑ Report community room</button>
+                        <button type="button" id="menu-leave-room" class="danger" role="menuitem">⇥ Leave room</button>
+                      </div>
+                    </div>
+                    <button id="community-room-close" class="secondary room-close" type="button" aria-label="Close room">×</button>
+                  </div>
+                </header>
+
+                <!-- SEARCH BAR OVERLAY -->
+                <div id="community-search-bar" class="room-search-bar hidden">
+                  <input id="community-search-input" type="search" placeholder="Filter messages in this room…" aria-label="Filter messages">
+                  <button id="community-search-clear" type="button" class="text-button">Clear</button>
+                </div>
+
+                <!-- LEFT SIDEBAR ON DESKTOP / COMPACT RAIL ON MOBILE -->
+                <aside class="room-side" aria-label="Community navigation">
+                  <div class="room-icon" aria-hidden="true"><span id="community-room-icon">◎</span></div>
+                  <p class="eyebrow" id="community-room-category">COMMUNITY SANCTUARY</p>
+                  <strong class="room-side-title" id="community-side-title">Open Discussion</strong>
+                  <p id="community-room-description" class="muted room-desc"></p>
+
+                  <nav class="room-side-nav" aria-label="Room sections">
+                    <button type="button" class="room-side-item is-active" data-room-tab="chats">💬 Chats</button>
+                    <button type="button" class="room-side-item" data-room-tab="members">👥 <span id="community-member-count">Members</span></button>
+                    <button type="button" class="room-side-item" data-room-tab="info">ⓘ Group Info</button>
+                    <button type="button" class="room-side-item" id="room-side-notifications">🔔 Notifications</button>
+                    <div class="room-theme-selector-wrap">
+                      <label for="community-theme-switcher" class="sr-only">Switch community theme</label>
+                      <select id="community-theme-switcher" class="room-theme-select" title="Preview or switch community theme">
+                        <option value="">🎨 Theme</option>
+                        <option value="open">Emerald · Open Discussion</option>
+                        <option value="activists">Emerald · Activists</option>
+                        <option value="christianity">Gold · Christianity</option>
+                        <option value="hinduism">Saffron · Hinduism</option>
+                        <option value="satanism">Crimson · Satanism</option>
+                        <option value="lgbtq">Rainbow · LGBTQ+</option>
+                      </select>
+                    </div>
+                  </nav>
+
+                  <span class="slow-mode-pill">1 msg / 15s</span>
+
+                  <div class="room-side-actions">
+                    <button id="community-room-report" class="secondary room-report-group" type="button">Report group</button>
+                    <small class="room-report-note">10 unique reports = 60-day suspension</small>
+                    <button id="community-room-leave" class="secondary" type="button">Leave room</button>
+                  </div>
+                </aside>
+
+                <!-- MAIN CHAT AREA -->
+                <div class="room-main">
+                  <div class="group-banner room-banner">
+                    <span class="room-banner-tag" id="community-banner-category">OPEN MINDS · HARMONY</span>
+                    <strong id="community-room-title">Room discussion</strong>
+                    <span id="community-banner-subtitle">Create • Share • Collaborate • Respect</span>
+                  </div>
+
+                  <!-- GROUP INFO PANEL (TOGGLED FROM SIDEBAR) -->
+                  <div id="community-info-drawer" class="room-info-card hidden">
+                    <h4>Community Guidelines &amp; Info</h4>
+                    <p id="community-info-text" class="muted">Respect every member's dignity. Challenge ideas thoughtfully. Slow mode is active at one message every 15 seconds.</p>
+                  </div>
+
+                  <div id="community-chat-list" class="community-chat-list" aria-live="polite"></div>
+
+                  <!-- EMOJI QUICK TRAY -->
+                  <div id="community-emoji-tray" class="emoji-tray hidden" role="group" aria-label="Insert emoji">
+                    <button type="button" class="emoji-btn">✨</button>
+                    <button type="button" class="emoji-btn">🌿</button>
+                    <button type="button" class="emoji-btn">🙏</button>
+                    <button type="button" class="emoji-btn">❤️</button>
+                    <button type="button" class="emoji-btn">🔥</button>
+                    <button type="button" class="emoji-btn">🌈</button>
+                    <button type="button" class="emoji-btn">🕉️</button>
+                    <button type="button" class="emoji-btn">✝️</button>
+                    <button type="button" class="emoji-btn">🕊️</button>
+                    <button type="button" class="emoji-btn">👏</button>
+                  </div>
+
+                  <form id="community-message-form" class="group-message-form room-composer">
+                    <button id="community-emoji-toggle" class="room-emoji-btn" type="button" aria-label="Insert emoji">☺</button>
+                    <input id="community-message-body" maxlength="1000" required placeholder="Share an idea respectfully…">
+                    <button class="primary room-send" type="submit" aria-label="Send message">➤</button>
+                  </form>
+                  <p id="community-chat-feedback" class="message" role="status" aria-live="polite">Respect people. Challenge ideas. No spam or harassment.</p>
+                </div>
+              </section>
+            </section>
+
+            <!-- PRIVATE GROUPS -->
+            <article class="panel group-create-panel">
+              <h3>Create a private group</h3>
+              <p id="group-plan-note" class="muted">Checking your subscription and group capacity…</p>
+              <form id="group-create-form" class="form">
+                <label>Group name<input id="new-group-name" maxlength="60" minlength="3" required placeholder="e.g. SyncTrA Creators"></label>
+                <label>Description<textarea id="new-group-description" maxlength="500" rows="3" placeholder="What is this group about?"></textarea></label>
+                <button id="create-group-button" class="primary" type="submit">Create group</button>
+              </form>
+            </article>
+
+            <article class="panel group-join-panel">
+              <h3>Join a private group</h3>
+              <p class="muted">Ask the group owner for its invitation ID. Your request must be approved.</p>
+              <form id="group-join-form" class="form">
+                <label>Group invitation ID<input id="group-invite-id" required placeholder="Paste the group ID"></label>
+                <button class="secondary" type="submit">Request to join</button>
+              </form>
+            </article>
+
+            <div id="groups-list" class="groups-list"></div>
+            <div id="groups-message" class="message" role="status" aria-live="polite"></div>
+
+            <!-- PRIVATE GROUP MESSENGER -->
+            <section id="group-room" class="panel group-room hidden">
+              <aside class="room-side group-side" aria-label="Group details">
+                <div class="room-icon" aria-hidden="true"><span id="group-side-initial">G</span></div>
+                <p class="eyebrow">PRIVATE GROUP</p>
+                <p id="group-side-name" class="group-side-name">Group conversation</p>
+                <p id="group-side-desc" class="muted room-desc"></p>
+                <nav class="room-side-nav" aria-label="Group sections">
+                  <span class="room-side-item is-active">💬 Chats</span>
+                  <span class="room-side-item">👥 <span id="group-side-members" class="muted">Members</span></span>
+                  <button id="group-side-notifications" class="room-side-item room-side-button" type="button">🔔 Notifications</button>
+                </nav>
+                <div class="room-side-actions">
+                  <button id="close-group-room" class="secondary" type="button">Close group</button>
+                </div>
+              </aside>
+
+              <div class="room-main">
+                <header class="room-header">
+                  <span class="room-brand-mark" aria-hidden="true">▶</span>
+                  <h3 id="group-room-title" class="room-header-title">Group conversation</h3>
+                  <span class="room-online-indicator" aria-label="Active"></span>
+                </header>
+                <div class="group-banner room-banner" aria-hidden="true">
+                  <span class="room-banner-tag">PRIVATE COLLABORATION</span>
+                  <strong id="group-banner-title">Group conversation</strong>
+                  <span id="group-banner-desc">Create • Share • Collaborate • Support</span>
+                </div>
+                <div id="group-chat-list" class="group-chat-list"></div>
+                <form id="group-message-form" class="group-message-form room-composer">
+                  <button id="group-emoji-toggle" class="room-emoji-btn" type="button" aria-label="Insert emoji">☺</button>
+                  <input id="group-message-body" maxlength="2000" required placeholder="Type a message…">
+                  <button class="primary room-send" type="submit" aria-label="Send message">➤</button>
+                </form>
+              </div>
+            </section>
+          </section>
+
+          <!-- MODERATOR CENTER -->
+          <section id="moderator-panel" class="groups-section hidden" aria-labelledby="moderator-title">
+            <div class="feed-heading">
+              <div>
+                <p class="eyebrow">ADMINISTRATION</p>
+                <h2 id="moderator-title">Moderator Center</h2>
+                <p class="muted">Private report review. Every final decision requires an explanation and is recorded.</p>
+              </div>
+              <button id="moderator-refresh" class="secondary" type="button">Refresh reports</button>
+            </div>
+            <div id="moderator-message" class="message" role="status" aria-live="polite"></div>
+            <h3 class="moderation-subtitle">Content reports</h3>
+            <div id="moderator-queue" class="moderator-queue"></div>
+            <div class="safety-divider"></div>
+            <h3 class="moderation-subtitle">Appeal review</h3>
+            <p class="muted">Review member appeals separately from the original report. Final decisions are written to the audit log.</p>
+            <div id="moderator-appeals" class="moderator-queue"></div>
+          </section>
+
+          <!-- ABOUT SYNCTRA -->
+          <section id="about-section" class="info-section panel">
+            <p class="eyebrow">OUR PURPOSE</p>
+            <h2>About SyncTrA</h2>
+            <p>SyncTrA is a creative community for expression, discovery and meaningful connection. Share your ideas, explore interests, create with others and find harmony through different perspectives.</p>
+            <div class="info-points">
+              <div><b>Express</b><small>Share your thoughts and creative work.</small></div>
+              <div><b>Discover</b><small>Meet members through interests, beliefs and philosophy.</small></div>
+              <div><b>Connect</b><small>Build respectful communities and conversations.</small></div>
+            </div>
+            <p class="tiny">SyncTrA welcomes different beliefs and viewpoints. Participation should remain respectful; disagreement is not a reason for harassment.</p>
+          </section>
+
+          <!-- FAQ -->
+          <section id="faq-section" class="info-section panel">
+            <p class="eyebrow">HELP CENTER</p>
+            <h2>Frequently Asked Questions</h2>
+            <details><summary>What is SyncTrA?</summary><p>A private creative and social community for sharing, discovering interests and connecting with members.</p></details>
+            <details><summary>Can I join different belief and philosophy discussions?</summary><p>Yes. Open Minds includes separate themed discussion spaces for Open Discussion, Activists, Christianity, Hinduism, Satanism, LGBTQ+, science, philosophy and technology.</p></details>
+            <details><summary>How do I find another member?</summary><p>Use Explore &amp; Network or open a member's name or profile photo from a community post.</p></details>
+            <details><summary>What is CTY?</summary><p>CTY is an internal platform credit. It is not cash, cannot be withdrawn or traded, and has no guaranteed monetary value.</p></details>
+            <details><summary>How do memberships work?</summary><p>Membership benefits and prices are shown on the Membership page. Checkout is not available until a secure payment provider is connected.</p></details>
+            <details><summary>How can I report or block someone?</summary><p>Use the report or block controls available on community content. Reports can be reviewed by authorized moderators.</p></details>
+          </section>
+
+          <!-- PUBLIC MEMBER PROFILE VIEW -->
+          <section id="member-profile-view" class="panel member-profile-view hidden" aria-live="polite">
+            <div class="feed-heading">
+              <div>
+                <p class="eyebrow">MEMBER PROFILE</p>
+                <h2 id="public-profile-name">Member</h2>
+                <p id="public-profile-username" class="muted"></p>
+              </div>
+              <button id="close-public-profile" class="secondary" type="button">Close</button>
+            </div>
+            <p id="public-profile-bio"></p>
+            <div class="profile-traits">
+              <p><strong>Personality</strong> <span id="public-profile-personality">Not set</span></p>
+              <p><strong>Interests</strong> <span id="public-profile-hobbies">Not set</span></p>
+            </div>
+            <div class="profile-actions">
+              <button id="public-profile-follow" class="primary" type="button">Follow</button>
+              <button id="public-profile-message" class="secondary" type="button">Message</button>
+            </div>
+            <h3>Public posts</h3>
+            <div id="public-profile-posts" class="feed-list"></div>
+            <p id="public-profile-status" class="message" role="status"></p>
+          </section>
+
+          <!-- MOBILE BOTTOM NAVIGATION -->
+          <nav class="mobile-bottom-nav" aria-label="Main navigation">
+            <a href="#feed-section" data-workspace="stream"><span>⌂</span><small>Stream</small></a>
+            <a href="#groups-section" data-workspace="garden"><span>♧</span><small>Garden</small></a>
+            <a class="create-shortcut" href="#creative-space" data-workspace="create"><span>＋</span><small>Create</small></a>
+            <a href="#messages-panel" data-workspace="chat"><span>▢</span><small>Chat</small></a>
+            <a href="#profile-section" data-workspace="you"><span>♙</span><small>You</small></a>
+          </nav>
+
+          <div id="dashboard-message" class="message" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>© SyncTrA · Harmony of creativity · Private members-only community</footer>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
